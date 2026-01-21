@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title | default: "William Mann" }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+
+<body>
+
+  {% include nav.html %}
+
+  <main class="page-container">
+    {{ content }}
+  </main>
+
+  <div class="page-container">
+    <div class="footer-image">
+      <img src="/Emory.png" alt="Emory Goizueta logo">
+    </div>
+  </div>
+
+  {% if page.url == "/" %}
+    <div class="page-container">
+      (Looking for <b>William Jacobmann</b>? That is my legal name, but I use Mann for professional purposes.)
+    </div>
+  {% endif %}
+
+</body>
+</html>
+
